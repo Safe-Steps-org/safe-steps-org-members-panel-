@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard - RideHail</title>
+    <link rel="stylesheet" href="./CSS/mainPanel.css">
+    <script src="./js/mainPanel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Driver Profile Panel -->
+    <div class="driver-panel">
+        <div class="driver-header">
+            <div class="avatar-upload">
+                <img src="./assets/image/no_user.jpg" alt="Driver" class="driver-avatar">
+                <div class="profile-plus" onclick="document.getElementById('avatarInput').click()">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+            </div>
+            <h2>Raju Rastogi</h2>
+            <p>Professional Driver</p>
+        </div>
+
+        <!-- Rest of your HTML remains the same -->
+        <div class="driver-stats">
+            <div class="stat-item">
+                <span class="stat-label">Rating</span>
+                <span class="stat-value">3.5 ★</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Trips</span>
+                <span class="stat-value">50</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Earnings</span>
+                <span class="stat-value">Rs. 2,000</span>
+            </div>
+        </div>
+
+        <div class="vehicle-info">
+            <h4>Vehicle Details</h4>
+            <div class="vehicle-details">
+                <p>
+                    <span>Type:</span>
+                    <span>Car</span>
+                </p>
+                <p>
+                    <span>Model:</span>
+                    <span>Tata EV 2021</span>
+                </p>
+                <p>
+                    <span>Color:</span>
+                    <span>Silver</span>
+                </p>
+                <p>
+                    <span>Plate:</span>
+                    <span>ABC-1234</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="driver-actions">
+            <button class="action-btn btn-primary" onclick="exit()">
+                <i class="fa-solid fa-right-from-bracket"></i> SignOut
+            </button>
+        </div>
+    </div>
+
+    <!-- Ride Requests Panel -->
+    <div class="rides-panel">
+        <div class="panel-header">
+            <h2>Available Rides</h2>
+        </div>
+
+        <div class="ride-requests">
+            <!-- Ride Request 1 -->
+            <div class="request-card">
+                <div class="customer-info">
+                    <!-- <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer" class="customer-avatar"> -->
+                    <div class="customer-details">
+                        <h4>Sarah Johnson</h4>
+                        <p>2.5 miles away • 5 min pickup</p>
+                    </div>
+                </div>
+
+                <div class="ride-details">
+                    <div class="location">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="location-text">
+                            <div class="location-label">Pickup</div>
+                            <div class="location-address">123 Main St, Downtown</div>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="location-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <div class="location-text">
+                            <div class="location-label">Dropoff</div>
+                            <div class="location-address">456 Park Ave, Uptown</div>
+                        </div>
+                    </div>
+
+                    <div class="ride-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Distance</div>
+                            <div class="meta-value">3.2 mi</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">12 min</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Fare</div>
+                            <div class="meta-value">$18.50</div>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="map-container">
+                        <div class="map-overlay">Live Location</div>
+                        <div id="map-1" class="map"></div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-accept">Accept</button>
+                    <button class="btn btn-reject">Decline</button>
+                </div>
+            </div>
+
+            <!-- Ride Request 2 -->
+            <div class="request-card" id="card2">
+                <div class="customer-info">
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Customer" class="customer-avatar">
+                    <div class="customer-details">
+                        <h4>Emily Davis</h4>
+                        <p>0.8 miles away • 2 min pickup</p>
+                    </div>
+                </div>
+
+                <div class="ride-details">
+                    <div class="location">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="location-text">
+                            <div class="location-label">Pickup</div>
+                            <div class="location-address">Durgapur, Gamonbridge</div>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="location-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <div class="location-text">
+                            <div class="location-label">Dropoff</div>
+                            <div class="location-address">City Center Water Park</div>
+                        </div>
+                    </div>
+
+                    <div class="ride-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Distance</div>
+                            <div class="meta-value">2.1 mi</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">8 min</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Fare</div>
+                            <div class="meta-value">$12.30</div>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="map-container">
+                        <div class="map-overlay">Live Location</div>
+                        <div id="map-2" class="map"></div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-accept">Accept</button>
+                    <button class="btn btn-reject">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add this script to handle image upload and preview
+        document.getElementById('avatarInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.querySelector('.driver-avatar').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
