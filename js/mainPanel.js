@@ -9,7 +9,7 @@
     }
 
     // Add event listener to logout button
-    document.querySelector('.action-btn.btn-primary').addEventListener('click', exit);
+    // document.querySelector('.action-btn.btn-primary').addEventListener('click', exit);
 
 
 
