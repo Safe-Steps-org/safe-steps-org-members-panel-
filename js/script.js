@@ -1,11 +1,3 @@
-// function signin(){
-//     alert('Account Signed Successfully...\nWelcome to Safe Steps')
-
-//     // redirect this page
-//     window.location.href = "mainPanel.html"; 
-
-// }
-
 document.querySelector(".signin-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -30,23 +22,6 @@ document.querySelector(".signin-form").addEventListener("submit", function (e) {
         alert("Please check the option 'remember me'!");
         
     }
-
-    
-
-
-    // if (password !== confirmPassword) {
-    //     alert("Password not matched!");
-    //     return;
-    // } else {
-
-    //     alert("Password reset successfully!");
-
-    //     // redirect to next page
-    //     window.location.href = "index.html";
-    // }
-
-
-
 });
 
 
